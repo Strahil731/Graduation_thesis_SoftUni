@@ -31,22 +31,34 @@ export default function Navbar() {
                                 <Link to="/shop">
                                     <li className="mr-5 hover:text-gray-900 cursor-pointer">Shop</li>
                                 </Link>
-                                <li className="mr-5 hover:text-gray-900 cursor-pointer">About</li>
-                                <li className="mr-5 hover:text-gray-900 cursor-pointer">Contact</li>
+
+                                <Link to="/about">
+                                    <li className="mr-5 hover:text-gray-900 cursor-pointer">About</li>
+                                </Link>
+
+                                <Link to="/contact">
+                                    <li className="mr-5 hover:text-gray-900 cursor-pointer">Contact</li>
+                                </Link>
                             </ul>
                         </div>
 
                         {isOpen
                             ? <div>
-                                <ul className="flex flex-col gap-10 text-2xl absolute top-[73px] left-0 h-screen w-full z-10 bg-red-500 text-white items-center justify-center font-semibold">
+                                <ul className="flex items-center text-lg justify-center font-semibold">
                                     <Link to="/">
-                                        <li className="mt-5 hover:text-gray-900 cursor-pointer">Home</li>
+                                        <li className="mr-5 hover:text-gray-900 cursor-pointer">Home</li>
                                     </Link>
                                     <Link to="/shop">
                                         <li className="mr-5 hover:text-gray-900 cursor-pointer">Shop</li>
                                     </Link>
-                                    <li className="mt-5 hover:text-gray-900 cursor-pointer">About</li>
-                                    <li className="mt-5 hover:text-gray-900 cursor-pointer">Contact</li>
+
+                                    <Link to="/about">
+                                        <li className="mr-5 hover:text-gray-900 cursor-pointer">About</li>
+                                    </Link>
+
+                                    <Link to="/contact">
+                                        <li className="mr-5 hover:text-gray-900 cursor-pointer">Contact</li>
+                                    </Link>
                                 </ul>
                                 <button className="absolute top-[75px] z-10 right-0 text-white py-2 px-4 cursot-pointer">
                                     <ImCross size={30} onClick={ShowMenuHandler} />
