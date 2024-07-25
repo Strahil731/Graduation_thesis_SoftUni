@@ -6,6 +6,8 @@ export default function ShopPage() {
     const [category, setCategory] = useState([]);
     const [products, setProducts] = useState([]);
 
+    const [selectProduct, setSelectProduct] = useState("");
+
     useEffect(() => {
         async function getAllProductsCategory() {
             try {
@@ -22,6 +24,10 @@ export default function ShopPage() {
 
         getAllProductsCategory()
     }, []);
+
+    function filterProducts(allItem) {
+        console.log(allItem);
+    }
 
 
     useEffect(() => {
@@ -46,6 +52,7 @@ export default function ShopPage() {
                         >
                             <button
                                 className="border bg-black text-white px-2 py-2 mt-5"
+                                onClick={filterProducts(allItem)}
                             >
                                 {allItem}
                             </button>
@@ -57,14 +64,14 @@ export default function ShopPage() {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div
-                        className="flex gap-4 text-center"
+                        className="flex gap-4"
                     >
                         {products.map((item, index) => (
-                            <div key={index} className="lg:w-1/4 md:w-1/2 p-4 w-full border">
+                            <div key={index} className="lg:w-1/4 md:w-1/2 p-4 w-full">
                                 <a className="block relative h-48 rounded overflow-hidden">
                                     <img
                                         alt="ecommerce"
-                                        className="object-contain w-50 h-50 block"
+                                        className="object-contain w-48 h-48 block"
                                         src={item.image}
                                     />
                                 </a>
