@@ -1,8 +1,6 @@
-import Layout from "../../components/Layout/Layout";
-
 export default function AboutPage() {
     return (
-        <Layout>
+        <>
             <div className="h-[90vh]">
                 <section className="text-gray-600 body-font">
                     <div className="container px-5 py-24 mx-auto">
@@ -55,6 +53,6 @@ export default function AboutPage() {
                     </div>
                 </section>
             </div>
-        </Layout>
+        </>
     )
 }

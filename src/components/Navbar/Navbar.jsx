@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ userName }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -76,6 +76,8 @@ export default function Navbar() {
                                     Log in
                                 </button>
                             </Link>
+                            <span>{userName}</span>
+
                             {isOpen
                                 ? ""
                                 : <button className="md:hidden" onClick={ShowMenuHandler}>

@@ -1,9 +1,8 @@
-import Layout from "../../components/Layout/Layout";
 import Iframe from "react-iframe";
 
 export default function ContactPage() {
     return (
-        <Layout>
+        <>
             <section className="text-gray-600 body-font relative">
                 <div className="absolute inset-0 bg-gray-300">
                     <Iframe
@@ -36,6 +35,6 @@ export default function ContactPage() {
                     </div>
                 </div>
             </section>
-        </Layout>
+        </>
     );
 }

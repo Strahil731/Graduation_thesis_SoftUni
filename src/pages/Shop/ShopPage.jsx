@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "../../components/Layout/Layout";
 
 export default function ShopPage() {
 
@@ -49,7 +48,7 @@ export default function ShopPage() {
 
     return (
         <>
-            <Layout>
+            <>
                 <div className="h-screen">
                     <div className="flex gap-3 flex-wrap">
                         {allCategory.map((allProducts, index) => (
@@ -83,6 +82,11 @@ export default function ShopPage() {
                                                         Title: {item.name}
                                                     </h2>
                                                     <p className="mt-1">Price: ${item.price}</p>
+                                                    <button
+                                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                    >
+                                                        Add to cart
+                                                    </button>
                                                 </div>
                                             </div>
                                         ))}
@@ -107,6 +111,11 @@ export default function ShopPage() {
                                                 Title: Huawei
                                             </h2>
                                             <p className="mt-1">Price: $499</p>
+                                            <button
+                                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            >
+                                                Add to cart
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
@@ -125,6 +134,11 @@ export default function ShopPage() {
                                                 Title: Asus Rog Strix
                                             </h2>
                                             <p className="mt-1">Price: $2099</p>
+                                            <button
+                                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            >
+                                                Add to cart
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
@@ -143,6 +157,11 @@ export default function ShopPage() {
                                                 Title: Lenovo Slim
                                             </h2>
                                             <p className="mt-1">Price: $1459</p>
+                                            <button
+                                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            >
+                                                Add to cart
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
@@ -161,13 +180,18 @@ export default function ShopPage() {
                                                 Title: LG
                                             </h2>
                                             <p className="mt-1">Price: $769</p>
+                                            <button
+                                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            >
+                                                Add to cart
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                     }
                 </div>
-            </Layout>
+            </>
         </>
     );
 }
