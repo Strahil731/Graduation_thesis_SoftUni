@@ -67,7 +67,7 @@ export default function ShopPage() {
                                 <div className="container px-5 py-24 mx-auto">
                                     <div className="flex gap-4">
                                         {products.map((item, index) => (
-                                            <div className="lg:w-1/4 md:w-1/2 p-4 w-full" key={index}>
+                                            <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4" key={index}>
                                                 <a className="block relative h-48 rounded overflow-hidden">
                                                     <img
                                                         alt="image"
@@ -91,7 +91,7 @@ export default function ShopPage() {
                             </section> :
                             <div className="container px-5 py-24 mx-auto">
                                 <div className="flex gap-4">
-                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
                                         <a className="block relative h-48 rounded overflow-hidden">
                                             <img
                                                 alt="image"
@@ -109,7 +109,7 @@ export default function ShopPage() {
                                             <p className="mt-1">Price: $499</p>
                                         </div>
                                     </div>
-                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
                                         <a className="block relative h-48 rounded overflow-hidden">
                                             <img
                                                 alt="image"
@@ -127,7 +127,7 @@ export default function ShopPage() {
                                             <p className="mt-1">Price: $2099</p>
                                         </div>
                                     </div>
-                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
                                         <a className="block relative h-48 rounded overflow-hidden">
                                             <img
                                                 alt="image"
@@ -145,7 +145,7 @@ export default function ShopPage() {
                                             <p className="mt-1">Price: $1459</p>
                                         </div>
                                     </div>
-                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                    <div className="lg:w-1/4 md:w-1/2 p-4 w-full border-4">
                                         <a className="block relative h-48 rounded overflow-hidden">
                                             <img
                                                 alt="image"
