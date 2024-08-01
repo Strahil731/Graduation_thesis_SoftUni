@@ -1,0 +1,76 @@
+.nav {
+    width: 100%;
+    background: #e9ebee;
+}
+
+.nav .container .top_bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav .container .top_bar .thisP {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav .container .top_bar .link {
+    margin: 2px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    background: #558cda;
+    color: white;
+    text-decoration: none;
+}
+
+.nav .container .top_bar .link:hover {
+    background: none;
+    color: #558cda;
+}
+
+.nav .container .mid_bar {
+    width: 100%;
+}
+
+.nav .container .mid_bar .contant {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: white;
+}
+
+.nav .container .mid_bar .contant .logo img {
+    width: 150px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.nav .container .mid_bar .contant .logo img:hover {
+    opacity: 0.6;
+}
+
+.nav .container .mid_bar .contant .search_bar {
+    display: flex;
+    margin-left: -30px;
+}
+
+.nav .container .mid_bar .contant .search_bar input {
+    width: 350px;
+    padding: 14px;
+    outline: none;
+    border: 1px solid #dcdcdc;
+}
+
+.nav .container .mid_bar .contant .search_bar button {
+    padding: 14px;
+    width: 80px;
+    outline: none;
+    border: 1px solid #558cda;
+    background: #558cda;
+    cursor: pointer;
+    color: white;
+}
