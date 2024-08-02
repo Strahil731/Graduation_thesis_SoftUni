@@ -12,7 +12,7 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <Navbar auth={auth} setAuth={setAuth} />
+                <Navbar auth={auth} setAuth={setAuth} userDetails={userDetails} />
                 <Rout
                     setUserDetails={setUserDetails}
                     setAuth={setAuth}
