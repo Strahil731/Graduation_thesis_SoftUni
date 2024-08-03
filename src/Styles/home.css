@@ -221,21 +221,6 @@
     justify-content: space-between;
 }
 
-.home .footer {
-    width: 100%;
-    padding: 15px;
-    background: black;
-}
-
-.home .footer h3 {
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: italic;
-}
-
 @media(max-width: 950px) {
     .home .top_banner .contant {
         margin-top: -60px;
