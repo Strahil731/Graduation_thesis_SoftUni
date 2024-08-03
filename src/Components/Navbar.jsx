@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-export default function Navbar({ auth, setAuth, userDetails }) {
+export default function Navbar({ auth, setAuth, userDetails, setSearch, search }) {
 
     const [openNav, setOpenNav] = useState(false);
 
@@ -83,7 +83,12 @@ export default function Navbar({ auth, setAuth, userDetails }) {
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Square_One_Shopping_Centre_Logo.png" alt="logo" />
                             </div>
                             <div className="search_bar">
-                                <input type="text" placeholder="Search..." />
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
                                 <button>Search</button>
                             </div>
                             <div className="icons">

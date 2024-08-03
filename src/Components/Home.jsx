@@ -5,21 +5,40 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { GiReceiveMoney } from "react-icons/gi";
 import { LiaComments } from "react-icons/lia";
 import { useEffect, useState } from "react";
+import { CiHeart } from "react-icons/ci";
+import { TfiReload } from "react-icons/tfi";
+import { CiSearch } from "react-icons/ci";
 
 export default function Home() {
-    const [product, setProduct] = useState([]);
+
+    const [sale, setSale] = useState([]);
+    const [newProduct, setNewProduct] = useState([]);
+
+    async function fetchData() {
+        const response = await fetch("https://myshop-a6615-default-rtdb.europe-west1.firebasedatabase.app/.json", {
+            method: "GET"
+        });
+        const data = await response.json();
+
+        setSale(data);
+
+        const saleFilter = data.filter((currentEl) => {
+            return currentEl.type === 'sale';
+        });
+
+        setSale(saleFilter);
+
+        const newproduct = data.filter((currentEl) => {
+            return currentEl.type === 'new';
+        });
+
+        setNewProduct(newproduct);
+    }
 
     useEffect(() => {
-        async function showProduct() {
-            const response = await fetch("https://myshop-a6615-default-rtdb.europe-west1.firebasedatabase.app/.json", {
-                method: "GET"
-            });
-            const data = await response.json();
-
-            setProduct(data);
-        }
-        showProduct();
+        fetchData();
     }, []);
+
     return (
         <>
             <div className="home">
@@ -79,10 +98,58 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="product">
-                    <div className="product_box">
-                        
+                <div className="sale_products">
+                    <h2>Hot Deal Products</h2>
+                    <div className="container">
+                        {
+                            sale.map((currentEl) => {
+                                return (
+                                    <>
+                                        <div className="box">
+                                            <div className="img_box">
+                                                <img src={currentEl.img} alt="image" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="icons">
+                                                    <div className="icon">
+                                                        <CiHeart />
+                                                    </div>
+                                                    <div className="icon">
+                                                        <TfiReload />
+                                                    </div>
+                                                    <div className="icon">
+                                                        <CiSearch />
+                                                    </div>
+                                                </div>
+                                                <h3>{currentEl.Name}</h3>
+                                                <h4>${currentEl.price}</h4>
+                                                <button>Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </>
+                                );
+                            })
+                        }
                     </div>
+                </div>
+                <div className="mid_banner">
+                    <div className="container">
+                        <div className="banner_box">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/003/810/922/small/horizontal-banner-for-black-friday-sale-black-balls-with-shiny-ribbons-golden-letters-vector.jpg"
+                                alt="banner"
+                            />
+                        </div>
+                        <div className="banner_box">
+                            <img
+                                src="https://piktochart.com/wp-content/uploads/2022/11/large-142.jpg"
+                                alt="banner"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="footer">
+                    <h3>&copy; Strahil Dimitrov</h3>
                 </div>
             </div>
         </>

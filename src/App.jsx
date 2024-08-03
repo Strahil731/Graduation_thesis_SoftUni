@@ -8,11 +8,12 @@ function App() {
     // Storing user details in useState hooks
     const [userDetails, setUserDetails] = useState();
     const [auth, setAuth] = useState(false);
+    const [search, setSearch] = useState("");
 
     return (
         <>
             <BrowserRouter>
-                <Navbar auth={auth} setAuth={setAuth} userDetails={userDetails} />
+                <Navbar auth={auth} setAuth={setAuth} userDetails={userDetails} setSearch={setSearch} search={search} />
                 <Rout
                     setUserDetails={setUserDetails}
                     setAuth={setAuth}
