@@ -148,9 +148,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="footer">
-                    <h3>&copy; Strahil Dimitrov</h3>
-                </div>
             </div>
         </>
     );
