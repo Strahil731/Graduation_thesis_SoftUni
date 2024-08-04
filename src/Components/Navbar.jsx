@@ -111,7 +111,6 @@ export default function Navbar({ auth, setAuth, userDetails, setSearch, search }
                         <ul>
                             <li><Link to="/" className="link">Home</Link></li>
                             <li><Link to="/shop" className="link">Shop</Link></li>
-                            <li><Link to="/about" className="link">About</Link></li>
                             <li><Link to="/contact" className="link">Contact</Link></li>
                         </ul>
                         <div className="offer">
