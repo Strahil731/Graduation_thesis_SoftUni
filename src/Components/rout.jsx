@@ -3,8 +3,10 @@ import Register from "./Register";
 import Login from "./Login";
 import Home from "./Home";
 import Shop from "./Shop";
+import Cart from "./Cart";
+import Contact from "./Contact";
 
-export default function Rout({ setUserDetails, setAuth }) {
+export default function Rout({ setUserDetails, setAuth, addToCart, cart, setCart, userDetails, auth }) {
     return (
         <>
             <Routes>
@@ -12,6 +14,7 @@ export default function Rout({ setUserDetails, setAuth }) {
                     path="/"
                     element={<Home
                         setUserDetails={setUserDetails}
+                        addToCart={addToCart}
                     />}
                 />
                 <Route
@@ -32,7 +35,24 @@ export default function Rout({ setUserDetails, setAuth }) {
 
                 <Route
                     path="/shop"
-                    element={<Shop />}
+                    element={<Shop
+                        addToCart={addToCart}
+                    />}
+                />
+
+                <Route
+                    path="/cart"
+                    element={<Cart
+                        setCart={setCart}
+                        cart={cart}
+                        userDetails={userDetails}
+                        auth={auth}
+                    />}
+                />
+
+                <Route
+                    path="/contact"
+                    element={<Contact auth={auth}/>}
                 />
             </Routes>
         </>

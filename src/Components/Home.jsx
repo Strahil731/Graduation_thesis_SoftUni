@@ -5,11 +5,8 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { GiReceiveMoney } from "react-icons/gi";
 import { LiaComments } from "react-icons/lia";
 import { useEffect, useState } from "react";
-import { CiHeart } from "react-icons/ci";
-import { TfiReload } from "react-icons/tfi";
-import { CiSearch } from "react-icons/ci";
 
-export default function Home() {
+export default function Home({ addToCart }) {
 
     const [sale, setSale] = useState([]);
     const [newProduct, setNewProduct] = useState([]);
@@ -110,20 +107,9 @@ export default function Home() {
                                                 <img src={currentEl.img} alt="image" />
                                             </div>
                                             <div className="detail">
-                                                <div className="icons">
-                                                    <div className="icon">
-                                                        <CiHeart />
-                                                    </div>
-                                                    <div className="icon">
-                                                        <TfiReload />
-                                                    </div>
-                                                    <div className="icon">
-                                                        <CiSearch />
-                                                    </div>
-                                                </div>
                                                 <h3>{currentEl.Name}</h3>
                                                 <h4>${currentEl.price}</h4>
-                                                <button>Add To Cart</button>
+                                                <button onClick={() => addToCart(currentEl)}>Add To Cart</button>
                                             </div>
                                         </div>
                                     </>

@@ -82,21 +82,9 @@ export default function Navbar({ auth, setAuth, userDetails, setSearch, search }
                             <div className="logo">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Square_One_Shopping_Centre_Logo.png" alt="logo" />
                             </div>
-                            <div className="search_bar">
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    value={search}
-                                    onChange={(e) => setSearch(e.target.value)}
-                                />
-                                <button>Search</button>
-                            </div>
                             <div className="icons">
                                 <div className="icon">
                                     <Link to="/cart"><FaShoppingCart /></Link>
-                                </div>
-                                <div className="icon">
-                                    <FaRegHeart />
                                 </div>
                             </div>
                         </div>

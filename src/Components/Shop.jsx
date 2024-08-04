@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import "../Styles/shop.css";
-import { CiHeart } from "react-icons/ci";
-import { TfiReload } from "react-icons/tfi";
-import { CiSearch } from "react-icons/ci";
 
 export default function Shop({ addToCart }) {
 
@@ -21,6 +18,27 @@ export default function Shop({ addToCart }) {
         showProduct();
     }, []);
 
+    async function filterCat(category) {
+        const response = await fetch("https://myshop-a6615-default-rtdb.europe-west1.firebasedatabase.app/.json", {
+            method: "GET"
+        });
+        const data = await response.json();
+
+        const filterData = data.filter((x) => {
+            return x.cat === category;
+        });
+
+        setProduct(filterData);
+    }
+
+    async function allProducts(){
+        const response = await fetch("https://myshop-a6615-default-rtdb.europe-west1.firebasedatabase.app/.json", {
+            method: "GET"
+        });
+        const data = await response.json();
+        setProduct(data)
+    }
+
     return (
         <>
             <div className="shop">
@@ -30,14 +48,15 @@ export default function Shop({ addToCart }) {
                         <div className="contant">
                             <h3><span>Product</span> Categories</h3>
                             <ul>
-                                <li>Laptop</li>
-                                <li>Computer</li>
-                                <li>Smart Watch</li>
-                                <li>Phone</li>
-                                <li>Television</li>
-                                <li>Audio System</li>
-                                <li>Game</li>
-                                <li>Navigation</li>
+                                <li onClick={allProducts}>All Product</li>
+                                <li onClick={() => filterCat("Laptop")}>Laptop</li>
+                                <li onClick={() => filterCat("Computer")}>Computer</li>
+                                <li onClick={() => filterCat("Smart Watch")}>Smart Watch</li>
+                                <li onClick={() => filterCat("Phone")}>Phone</li>
+                                <li onClick={() => filterCat("Television")}>Television</li>
+                                <li onClick={() => filterCat("Audio System")}>Audio System</li>
+                                <li onClick={() => filterCat("Game")}>Game</li>
+                                <li onClick={() => filterCat("Navigation")}>Navigation</li>
                             </ul>
                         </div>
                     </div>
@@ -60,17 +79,6 @@ export default function Shop({ addToCart }) {
                                                         <img src={currentEl.img} alt="image" />
                                                     </div>
                                                     <div className="detail">
-                                                        <div className="icons">
-                                                            <div className="icon">
-                                                                <CiHeart />
-                                                            </div>
-                                                            <div className="icon">
-                                                                <TfiReload />
-                                                            </div>
-                                                            <div className="icon">
-                                                                <CiSearch />
-                                                            </div>
-                                                        </div>
                                                         <h3>{currentEl.Name}</h3>
                                                         <h4>${currentEl.price}</h4>
                                                         <button onClick={() => addToCart(currentEl)}>Add To Cart</button>
