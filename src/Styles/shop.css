@@ -64,3 +64,144 @@
 .shop .shop_container .right_box .contant .top_banner img {
     width: 850px;
 }
+
+.shop .shop_container .right_box .contant h2 {
+    font-size: 28px;
+    color: black;
+    margin-top: 15px;
+    border-bottom: 2px solid #558cda;
+    width: 150px;
+    letter-spacing: 1px;
+}
+
+.shop .shop_container .right_box .contant .product_container {
+    margin-top: 20px;
+    max-width: 850px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shop .shop_container .right_box .contant .product_container .box {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 200px;
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+    transition: 0.5s;
+}
+
+.shop .shop_container .right_box .contant .product_container .box:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .img_box img {
+    width: 150px;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail .icons {
+    margin-top: -30px;
+    position: absolute;
+    transition: 0.5s;
+    display: flex;
+    opacity: 0;
+}
+
+.shop .shop_container .right_box .contant .product_container .box:hover .detail .icons {
+    opacity: 1;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail .icons .icon {
+    margin-left: 10px;
+    background: white;
+    padding: 10px 10px;
+    border: 1px solid #dcdcdc;
+    color: black;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail .icons .icon:hover {
+    border: none;
+    background: #558cda;
+    color: white;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail h3 {
+    margin-top: 10px;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail h4 {
+    margin-top: 10px;
+    color: #558cda;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail button {
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #558cda;
+    background: #558cda;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.shop .shop_container .right_box .contant .product_container .box .detail button:hover {
+    background: none;
+    color: #558cda;
+}
+
+@media(max-width: 1200px) {
+    .shop .shop_container {
+        flex-direction: column;
+    }
+
+    .shop .shop_container .left_box {
+        width: 100%;
+    }
+
+    .shop .shop_container .left_box .contant {
+        max-width: 100%;
+        border: none;
+    }
+
+    .shop .shop_container .left_box .contant h3 {
+        text-align: center;
+    }
+
+    .shop .shop_container .left_box .contant ul {
+        display: block;
+    }
+
+    .shop .shop_container .left_box .contant ul li {
+        width: 100%;
+    }
+
+    .shop .shop_container .right_box .contant .product_container {
+        max-width: 100%;
+    }
+
+    .shop .shop_container .right_box .contant .top_banner {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 950px) {
+    .shop .shop_container .right_box .contant .top_banner img {
+        width: 80%;
+    }
+}
