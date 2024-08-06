@@ -112,3 +112,21 @@
     background: none;
     color: #558cda;
 }
+
+@media(max-width: 950px) {
+    .contact {
+        width: 100%;
+    }
+
+    .contact .container .message .message_container {
+        margin-left: 120px;
+    }
+
+    .contact .container .message .message_container .input_box input {
+        max-width: 60%;
+    }
+
+    .contact .container .message .message_container .input_box textarea {
+        max-width: 60%;
+    }
+}
