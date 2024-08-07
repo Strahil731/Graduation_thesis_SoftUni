@@ -118,15 +118,28 @@
         width: 100%;
     }
 
+    .contact .container {
+        width: 60%;
+    }
+
+    .contact .container .message {
+        max-width: 100%;
+    }
+
     .contact .container .message .message_container {
-        margin-left: 120px;
+        margin-left: -100px;
+    }
+
+    .contact .container .message .message_container .input_box {
+        width: 100%;
     }
 
     .contact .container .message .message_container .input_box input {
-        max-width: 60%;
+        width: 180%;
     }
 
     .contact .container .message .message_container .input_box textarea {
-        max-width: 60%;
+        width: 180%;
+        height: 150px;
     }
 }
